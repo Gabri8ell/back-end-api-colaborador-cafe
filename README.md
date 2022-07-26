@@ -1,4 +1,4 @@
-## Backend Api de cadastro de Colaboradores e o que será trazdi para o Café da Manhã.
+## Backend Api de cadastro de Colaboradores e o que será trazido para o Café da Manhã.
 ### --- Ferramentas
 *   VS Code
 *   Java 17
