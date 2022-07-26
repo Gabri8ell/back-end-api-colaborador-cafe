@@ -2,6 +2,9 @@ package com.mypc.backendapi.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -53,7 +56,7 @@ public class CafeDaManhaController{
     @GetMapping("/buscar_por_nome/{nome}")
     public List<CafeManhaResponse> buscarPorNome(@PathVariable String nome){
         List<CafeManhaResponse> cfResponse = cfService.buscarPorNome(nome).stream()
-        .map(cafe -> new CafeManhaResponse(cafe)).toList();
+        .map(cafe -> new CafeManhaResponse(cafe)).collect(Collectors.toList());
 
         return cfResponse;
     }
